@@ -1,14 +1,18 @@
 body {
-    background-color: #fffbf7;
+    background-color: #572649;
     font-family:'Nunito', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .card {
-    background-color:rgb(255, 248, 253);
+    background-color:#79305a;
     border-radius: 10px;
     margin: 20px;
     padding: 20px;
@@ -17,27 +21,47 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 550%;
+    box-sizing: border-box;
 }
 
 .enter {
     background-color: rgb(255, 248, 253);
     border-radius: 10px;
-    color: #d15faf;
+    color: #b55385;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 h1 {
     font-family: inherit;
-    color: #ac428c;
+    color: #bf6b99;
     font-size: 55px;
 }
 
 #strength, #score {
-    color:#d15faf;
+    color:#cf91b5;
     font-weight: bold;
     font-size: 25px;
 }
 
 .list {
-    color: #ca68ad
+    color: #e0bbd2;
 }
 
+.require {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 15px
+}
+
+.lilbox {
+    background-color: #8e3563;
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -19,34 +19,34 @@ passwordInput.addEventListener("input", function() {
 
     const hasUppercase = /[A-Z]/.test(password);
     if (hasUppercase) {
-      uppercaseCheck.textContent = "Uppercase: Present";
+      uppercaseCheck.textContent = "Present";
       points = points + 15;
     } else {
-      uppercaseCheck.textContent = "Uppercase: Missing";
+      uppercaseCheck.textContent = "Missing";
     }
    
     const hasLowercase = /[a-z]/.test(password);
     if (hasLowercase) {
-      lowercaseCheck.textContent = "Lowercase: Present";
+      lowercaseCheck.textContent = "Present";
       points = points + 15;
     } else {
-      lowercaseCheck.textContent = "Lowercase: Missing";
+      lowercaseCheck.textContent = "Missing";
     }
 
     const hasNumber = /[0-9]/.test(password);
     if (hasNumber) {
-      numberCheck.textContent = "Numbers: Present";
+      numberCheck.textContent = "Present";
       points = points + 15;
     } else {
-      numberCheck.textContent = "Numbers: Missing";
+      numberCheck.textContent = "Missing";
     }
 
     const hasSymbol = /[^a-zA-Z0-9]/.test(password);
     if (hasSymbol) {
-      symbolCheck.textContent = "Symbols: Present";
+      symbolCheck.textContent = "Present";
       points = points + 15;
     } else {
-      symbolCheck.textContent = "Symbols: Missing";
+      symbolCheck.textContent = "Missing";
     };
 
     score.textContent = "Score: " + points + "/100";
