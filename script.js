@@ -5,6 +5,7 @@ const lowercaseCheck = document.getElementById("lowercaseCheck");
 const numberCheck = document.getElementById("numberCheck");
 const symbolCheck = document.getElementById("symbolCheck");
 const score = document.getElementById("score");
+const lengthProgress = document.getElementById("lengthProgress")
 
 passwordInput.addEventListener("input", function() {
     const password = passwordInput.value;
@@ -16,6 +17,9 @@ passwordInput.addEventListener("input", function() {
     } else {
       lengthCheck.textContent = "Length: " + password.length + " characters (not long enough!)";
     }
+
+    const progress = Math.min(password.length / 10, 1) * 100;
+    lengthProgress.style.width = progress + "%";
 
     const hasUppercase = /[A-Z]/.test(password);
     if (hasUppercase) {
@@ -50,4 +54,5 @@ passwordInput.addEventListener("input", function() {
     };
 
     score.textContent = "Score: " + points + "/100";
+
 });

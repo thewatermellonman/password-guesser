@@ -22,24 +22,27 @@ body {
     justify-content: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     width: 100%;
-    max-width: 550%;
+    max-width: 550px;
     box-sizing: border-box;
 }
 
 .enter {
-    background-color: rgb(255, 248, 253);
+    background-color: #cf91b5;;
     border-radius: 10px;
-    color: #b55385;
+    color: #572649;
     width: 100%;
     max-width: 350px;
     box-sizing: border-box;
     padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    margin: 20px;
 }
 
 h1 {
     font-family: inherit;
-    color: #bf6b99;
-    font-size: 55px;
+    color: #e5a1ca;
+    font-size: 50px;
+    text-align: center;
 }
 
 #strength, #score {
@@ -48,20 +51,70 @@ h1 {
     font-size: 25px;
 }
 
-.list {
-    color: #e0bbd2;
-}
-
 .require {
     display: grid;
     width: 90%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 15px
+    padding: 15px;
+    gap: 20px;
 }
 
 .lilbox {
-    background-color: #8e3563;
+    background-color: #cf91b5;;
     border-radius: 10px;
     padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    color: #572649;
+}
+
+.length-section {
+    width: 90%;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #572649;
+    background-color: #cf91b5;
+    border-radius: 10px;
+}
+
+.length-bar {
+    width: 100%;
+    height: 12px;
+    background-color: #572649;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#lengthProgress {
+    height: 100%;
+    background-color: #bf6b99;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.length-section p {
+    margin-top: 0;
+    font-weight: bold;
+}
+
+#lengthCheck {
+    color: #e0bbd2;
+    text-align: center;
+    font-weight: bold;
+}
+
+.enter input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #bf6b99;
+    border-radius: 8px;
+    background-color: #fffbf7;
+    color: #572649;
+    font: inherit;
+}
+
+.enter input:focus {
+    outline: 2px solid #572649;
+    outline-offset: 2px;
 }
