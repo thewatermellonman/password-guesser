@@ -6,6 +6,17 @@ const numberCheck = document.getElementById("numberCheck");
 const symbolCheck = document.getElementById("symbolCheck");
 const score = document.getElementById("score");
 const lengthProgress = document.getElementById("lengthProgress")
+const commonPasswordCheck = document.getElementById("commonPasswordCheck");
+
+let commonPasswords = [];
+let passwordsLoaded = false;
+
+fetch("common-passwords.txt")
+  .then(response => response.text())
+  .then(data => {
+    commonPasswords = data.split("\n").map(password => password.trim());
+    passwordsLoaded = true;
+  });
 
 passwordInput.addEventListener("input", function() {
     const password = passwordInput.value;
@@ -55,4 +66,17 @@ passwordInput.addEventListener("input", function() {
 
     score.textContent = "Score: " + points + "/100";
 
+  const isCommon = commonPasswords.some(
+      commonPassword => commonPassword.toLowerCase() === password.toLowerCase()
+  );
+
+  if (passwordsLoaded) {
+      if (isCommon) {
+          commonPasswordCheck.textContent = "Warning: This is a common password!";
+      } else {
+          commonPasswordCheck.textContent = "Not found in our common-password list.";
+      }
+  } else {
+      commonPasswordCheck.textContent = "Loading password list...";
+  }
 });
