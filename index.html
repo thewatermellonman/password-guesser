@@ -13,11 +13,9 @@
         <div class="enter">
             <h3>ENTER A PASSWORD</h3>
             <input id="passwordInput" type="password">
-            <p>Passwords are not saved</p>
+            <p id="commonPasswordCheck">Common password check: Waiting...</p>
         </div>
-
-        <div id="commonPasswordCheck">Common password check: Waiting...</div>
-
+        
         <div id="score">
             Score: 0/100
         </div>
@@ -47,6 +45,15 @@
                 <h3>Symbols</h3>
                 <p id="symbolCheck">Missing</p>
             </div>
+        </div>
+
+        <div class="common">
+            <h4>What does the common password check mean?</h4>
+            <p>
+                The common password check compares your password to a list
+                of 10,000 words. If your password is found on this list,
+                it makes it easy for a hacker to discover.
+            </p>
         </div>
     </div>
 <script src="script.js"></script>
